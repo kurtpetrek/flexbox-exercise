@@ -1,5 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0; 
 }
+body {
+	padding-top: 50px;
+	font-family: 'Poppins', sans-serif;
+}
+h2 {
+	text-align: center;
+}
+#about {
+	color: purple;
+}
+.top-nav {
+	display: flex;
+	background: #000;
+	min-height: 50px;
+	overflow: hidden;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.top-nav a {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 3px solid #000;
+	transition: .5s;
+}
+.top-nav a:hover {
+	color: #047dbf;
+	border-bottom: 3px solid #047dbf;
+}
+.brand-text {
+	font-size: 25px;
+	margin-left: 15px;
+	padding: 0px;
+}
+.top-nav-list {
+	display: flex;
+	list-style: none;
+	margin-left: auto;
+}
+.top-nav-list li {
+	margin: 0px 15px;
+}
+.top-nav-list a {
+	padding: 5px;
+}
+.full-screen-bg {
+	height: calc(100vh - 50px);
+	width: 100%;
+	background-image: url("../images/large-dog.jpeg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #1485c3;
+	transition: background-image .5s;
+	animation: color-change 7s infinite;
+}
+@keyframes color-change {
+	0% {color: #1485c3;}
+	33% {color: #DB3069;}
+	66% {color: #F5D547;}
+	100% {color: #1485c3;}
+}
+.flex-row {
+	display: flex;
+}
+.col-4-2-1 {
+	width: 23%;
+	margin: 1%;
+	padding: 10px;
+}
+
+/* Utility Classes */
+.img-full-round {
+	width: 100%;
+	display: block;
+	margin: auto;
+	border-radius: 50%;	
+}
+
+@media (max-width: 1200px) {
+	.full-screen-bg {
+		background-image: url("../images/med-dog.jpg");
+	}
+	.flex-row {
+		flex-wrap: wrap;
+	}
+	.col-4-2-1 {
+		width: 48%;
+	}
+	.img-full-round {
+		width: 50%;
+	}
+}
+@media (max-width: 600px) {
+	.top-nav {
+		display: block;
+		padding: 10px 0px;
+	}
+	.full-screen-bg {
+		background-image: url("../images/small-dog.jpeg");
+	}
+
+	.col-4-2-1 {
+		width: 98%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
